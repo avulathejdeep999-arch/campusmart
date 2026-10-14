@@ -26,9 +26,104 @@ DATA = {
                ("Cycle Lock Chain", 250), ("Foldable Cycle", 6000), ("Hercules MTB", 4800), ("BSA Ladybird", 3000),
                ("Cycle Pump", 200), ("Cycle Basket Carrier", 300), ("Riding Gloves", 180), ("Cycle Light Set", 350)],
 }
+CATEGORY_IMAGES = {
+    "Books": [
+        "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    ],
+    "Electronics": [
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80",
+    ],
+    "Hostel Essentials": [
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+    ],
+    "Cycles": [
+        "https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1558980664-10e7170b5df9?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=900&q=80",
+    ],
+}
+ITEM_IMAGES = {
+    "Engineering Mathematics Textbook Set": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80",
+    "Data Structures in C": "https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=900&q=80",
+    "Operating System Concepts": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+    "Physics for Engineers": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=900&q=80",
+    "Organic Chemistry Notes Bundle": "https://images.unsplash.com/photo-1533900340604-21da7f6b5ba3?auto=format&fit=crop&w=900&q=80",
+    "DBMS Textbook": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80",
+    "Computer Networks by Tanenbaum": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    "GATE CS Previous Papers": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+    "Engineering Drawing Book": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=80",
+    "Discrete Mathematics": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+    "Digital Electronics Manual": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+    "English Communication Workbook": "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
+    "Thermodynamics Textbook": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80",
+    "Signals and Systems": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80",
+    "Python Programming Guide": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80",
+    "Scientific Calculator": "https://images.unsplash.com/photo-1609250291996-fde53c8f1d7a?auto=format&fit=crop&w=900&q=80",
+    "Wireless Mouse": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80",
+    "Bluetooth Earphones": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
+    "Power Bank 10000mAh": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80",
+    "USB Hub 4-Port": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+    "Arduino Uno Starter Kit": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80",
+    "Laptop Cooling Pad": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
+    "Mechanical Keyboard": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80",
+    "LED Desk Lamp": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "Raspberry Pi 4 Board": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+    "Smartwatch": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=900&q=80",
+    "Portable Speaker": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80",
+    "5-Socket Extension Board": "https://images.unsplash.com/photo-1555618563-98c5cc0eb3eb?auto=format&fit=crop&w=900&q=80",
+    "HD Webcam": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    "Mini Fridge": "https://images.unsplash.com/photo-1585518419759-7fe2e0fbf8a6?auto=format&fit=crop&w=900&q=80",
+    "Electric Kettle": "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=900&q=80",
+    "Foldable Study Table": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "Bucket and Mug Set": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "Single Mattress": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "Table Fan": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+    "Wall Mirror": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
+    "Storage Trunk": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "Induction Cooktop": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
+    "Clothes Drying Stand": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "Curtain Set": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "Room Heater": "https://images.unsplash.com/photo-1556911220-dabc1f02913a?auto=format&fit=crop&w=900&q=80",
+    "Study Chair": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "Hero Sprint Cycle": "https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=900&q=80",
+    "Atlas Gear Cycle": "https://images.unsplash.com/photo-1558980664-10e7170b5df9?auto=format&fit=crop&w=900&q=80",
+    "Firefox Road Bike": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80",
+    "Cycle Helmet": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80",
+    "Cycle Lock Chain": "https://images.unsplash.com/photo-1558980664-10e7170b5df9?auto=format&fit=crop&w=900&q=80",
+    "Foldable Cycle": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=900&q=80",
+    "Hercules MTB": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=900&q=80",
+    "BSA Ladybird": "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
+    "Cycle Pump": "https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=900&q=80",
+    "Cycle Basket Carrier": "https://images.unsplash.com/photo-1558566018-6609f4846eb1?auto=format&fit=crop&w=900&q=80",
+    "Riding Gloves": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80",
+    "Cycle Light Set": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80",
+}
 SENIOR_IDS = {9, 11, 18, 20, 42, 50}
 HOSTELS = ["Hostel A", "Hostel B", "Hostel C", "Hostel D"]
 CONDITIONS = ["Like New", "Good", "Fair"]
+
+
+def listing_image(title, category, index):
+    if title in ITEM_IMAGES:
+        return ITEM_IMAGES[title]
+    cat_images = CATEGORY_IMAGES.get(category, [])
+    if not cat_images:
+        return f"https://picsum.photos/seed/{category.lower().replace(' ', '-')}/{index}/300"
+    return cat_images[index % len(cat_images)]
 
 
 class Command(BaseCommand):
@@ -62,7 +157,7 @@ class Command(BaseCommand):
                 hostel="Hostel C" if n == 9 else HOSTELS[n % 4],
                 condition="Good" if n == 9 else ("Like New" if n == 8 else CONDITIONS[n % 3]),
                 negotiable=n % 2 == 0 or n == 9,
-                imageUrl=f"https://picsum.photos/seed/listing{n}/300/300",
+                imageUrl=listing_image(title, cat, n),
                 rating=4.5 if n == 9 else round(3.0 + (n * 7 % 21) / 10, 1),
                 total_reviews=n * 3 % 40 + 2, availability="Available",
                 description=f"{title}, used for one year by a final-year student. Collect it at a campus meetup point.",

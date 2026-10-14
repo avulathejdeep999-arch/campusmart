@@ -3,10 +3,17 @@ from datetime import timedelta
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = os.environ.get("SECRET_KEY", "dev-only-change-me")
-DEBUG = os.environ.get("DEBUG", "1") == "1"
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-local-development-only"
+)
 
+DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com",
+]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -70,9 +77,25 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": True,
 }
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://your-actual-project.vercel.app",
 ]
 CORS_ALLOW_CREDENTIALS = True
+DATABASES = {
+    "default": dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+        ssl_require=bool(os.environ.get("DATABASE_URL")),
+    )
+}
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": (
+            "whitenoise.storage.CompressedManifestStaticFilesStorage"
+        ),
+    },
+}
