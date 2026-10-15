@@ -3,14 +3,21 @@ from django.db import models
 
 
 class Listing(models.Model):
-    CATEGORIES = ["Books", "Electronics", "Hostel Essentials", "Cycles", "Sports"]
+    CATEGORY_CHOICES = [
+        ("Books", "Books"),
+        ("Electronics", "Electronics"),
+        ("Hostel Essentials", "Hostel Essentials"),
+        ("Cycles", "Cycles"),
+        ("Sports", "Sports"),
+    ]
+    CATEGORIES = [name for name, _ in CATEGORY_CHOICES]
     CONDITIONS = ["Like New", "Good", "Fair"]
 
     title = models.CharField(max_length=200)
     hostel = models.CharField(max_length=100)
     condition = models.CharField(max_length=20, choices=[(c, c) for c in CONDITIONS], default="Good")
     negotiable = models.BooleanField(default=False)
-    category = models.CharField(max_length=40, choices=[(c, c) for c in CATEGORIES])
+    category = models.CharField(max_length=40, choices=CATEGORY_CHOICES)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     imageUrl = models.URLField(max_length=500, blank=True)
     rating = models.FloatField(default=0)

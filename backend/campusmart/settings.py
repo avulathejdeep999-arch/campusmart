@@ -10,9 +10,10 @@ SECRET_KEY = os.environ.get(
     "django-insecure-local-development-only",
 )
 
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
+
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0", ".onrender.com"]
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
@@ -89,20 +90,44 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": True,
 }
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "https://campusmart-6r2h.vercel.app",
+    "https://campusmart-gp8v.onrender.com",
+    "http://localhost:8000",
 ]
+
 FRONTEND_URL = os.environ.get("FRONTEND_URL")
 if FRONTEND_URL:
     CORS_ALLOWED_ORIGINS.append(FRONTEND_URL)
+
+cors_env = os.environ.get("CORS_ALLOWED_ORIGINS", "")
+if cors_env:
+    CORS_ALLOWED_ORIGINS.extend(origin.strip() for origin in cors_env.split(",") if origin.strip())
+
+CORS_ALLOWED_ORIGINS = list(dict.fromkeys(CORS_ALLOWED_ORIGINS))
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
     "https://*.onrender.com",
+    "https://campusmart-gp8v.onrender.com",
+    "http://localhost:8000",
 ]
+
+csrf_env = os.environ.get("CSRF_TRUSTED_ORIGINS", "")
+if csrf_env:
+    CSRF_TRUSTED_ORIGINS.extend(origin.strip() for origin in csrf_env.split(",") if origin.strip())
+
 if FRONTEND_URL:
     CSRF_TRUSTED_ORIGINS.append(FRONTEND_URL)
+
+CSRF_TRUSTED_ORIGINS = list(dict.fromkeys(CSRF_TRUSTED_ORIGINS))
 
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
